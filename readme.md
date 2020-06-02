@@ -1,1 +1,1 @@
-This project is an attempt to learn weboack by following the awesome content at https://survivejs.com/webpack/developing/webpack-dev-server/
+This project is an attempt to learn webpack by following the awesome content at https://survivejs.com/webpack/developing/webpack-dev-server/
