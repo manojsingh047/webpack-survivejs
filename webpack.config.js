@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     plugins: [
+        //to automatically have the html file 
         new HtmlWebpackPlugin({
             title: "Webpack demo",
         }),
