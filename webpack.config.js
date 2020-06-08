@@ -1,17 +1,13 @@
 const merge = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const parts = require("./webpack.parts");
 
 const commonConfig = merge([
-    {
-        plugins: [
-            new HtmlWebpackPlugin({
-                title: "Webpack demo",
-            }),
-        ],
-    },
+    parts.htmlPlugin(),
+    parts.loadCSS(),
 ]);
+
+
 const productionConfig = merge([]);
 
 const developmentConfig = merge([
