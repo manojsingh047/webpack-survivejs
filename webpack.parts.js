@@ -1,5 +1,10 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); //provides and html file
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //extract minified css to a file
+const PurifyCSSPlugin = require("purifycss-webpack"); //remove unwanted css
+
+exports.purifyCSS = ({ paths }) => ({
+  plugins: [new PurifyCSSPlugin({ paths })],
+});
 
 exports.extractCSS = ({ include, exclude, use = [] }) => {
   // Output extracted CSS to a file
