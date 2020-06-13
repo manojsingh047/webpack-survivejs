@@ -2,6 +2,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin"); //provides and html fi
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //extract minified css to a file
 const PurifyCSSPlugin = require("purifycss-webpack"); //remove unwanted css
 
+exports.autoprefix = () => ({ //for auto adding vendor prefixes to styles
+  loader: "postcss-loader",
+  options: {
+    plugins: () => [require("autoprefixer")()],
+  },
+});
+
 exports.purifyCSS = ({ paths }) => ({
   plugins: [new PurifyCSSPlugin({ paths })],
 });
